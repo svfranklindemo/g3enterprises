@@ -1,15 +1,5 @@
 [
   {
-    "id": "page-metadata",
-    "fields": [
-      {
-        "component": "boolean",
-        "name": "breadcrumbs",
-        "label": "Show Breadcrumbs"
-      }
-    ]
-  },
-  {
     "id": "title",
     "fields": [
       {
@@ -136,6 +126,13 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      },
+      {
+        "component": "text",
+        "name": "style",
+        "value": "",
+        "label": "Style",
+        "valueType": "string"
       }
     ]
   },
@@ -197,14 +194,24 @@
     ]
   },
   {
-    "id": "accordion-item",
+    "id": "fragment",
     "fields": [
       {
-        "component": "text",
+        "component": "aem-content",
+        "name": "reference",
+        "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "carouselItem",
+    "fields": [
+      {
+        "component": "reference",
         "valueType": "string",
-        "name": "summary",
-        "value": "",
-        "label": "Summary"
+        "name": "image",
+        "label": "Image",
+        "multi": false
       },
       {
         "component": "richtext",

@@ -28,7 +28,8 @@
       "hero",
       "cards",
       "columns",
-      "accordion"
+      "fragment",
+      "carousel"
     ]
   },
   {
@@ -38,9 +39,9 @@
     ]
   },
   {
-    "id": "accordion",
+    "id": "carousel",
     "components": [
-      "accordion-item"
+      "carouselItem"
     ]
   }
 ]

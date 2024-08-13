@@ -99,7 +99,7 @@ export default async function decorate(block) {
   const placeholders = await fetchPlaceholders();
 
   block.setAttribute('role', 'region');
-  block.setAttribute('aria-roledescription', placeholders.carousel || 'Carousel');
+  block.setAttribute('aria-roledescription', placeholders['carousel'] || 'Carousel');
 
   const container = document.createElement('div');
   container.classList.add('carousel-slides-container');

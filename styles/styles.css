@@ -39,6 +39,8 @@
 
   /* nav height */
   --nav-height: 64px;
+  --breadcrumbs-height: 34px;
+  --header-height: var(--nav-height);
 }
 
 @font-face {

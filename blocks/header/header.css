@@ -303,6 +303,11 @@ header nav .nav-tools {
 }
 
 .nav-wrapper:not(.minimized) {
+  .nav-brand {
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
   .nav-tools {
     .icon > img {
       filter: invert();

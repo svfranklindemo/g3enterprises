@@ -38,7 +38,7 @@
   --heading-font-size-xs: 18px;
 
   /* header */
-  --nav-height: 64px;
+  --nav-height: 80px;
   --breadcrumbs-height: 35px;
   --header-height: var(--nav-height);
   --breadcrumbs-font-size: 14px;
@@ -61,7 +61,9 @@
     --heading-font-size-xs: 22px;
   }
 }
-
+* {
+  box-sizing: border-box;
+}
 body {
   font-size: var(--body-font-size-m);
   margin: 0;

@@ -9,7 +9,7 @@ main .hero-container {
 .hero {
   position: relative;
   padding: 32px;
-  min-height: 100vh;
+  min-height: 800px;
   max-height: 1080px;
 
   > div {

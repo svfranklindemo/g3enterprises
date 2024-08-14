@@ -10,7 +10,6 @@ main .hero-container {
   position: relative;
   padding: 32px;
   min-height: 800px;
-  max-height: 1080px;
 
   > div {
     &:nth-child(2) {

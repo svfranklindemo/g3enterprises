@@ -1,6 +1,9 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  &.minimized {
+    background-color: var(--background-color);
+  }
+  transition: background .2s ease-out;
   width: 100%;
   z-index: 2;
   position: fixed;

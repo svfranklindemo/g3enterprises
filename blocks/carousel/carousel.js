@@ -4,7 +4,7 @@ export default async function decorate(block) {
 /*
   await loadScript('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js');
   await loadCSS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css');*/
-  
+
   const arrBlocks = [...block.querySelectorAll(':scope > div')];
   const arrProperties = arrBlocks.splice(0,2);
   const className = arrProperties[0].innerText.trim();
@@ -22,7 +22,7 @@ export default async function decorate(block) {
             </li>`
   });
 
-  block.innerHTML = `<div class="splide" aria-label="Beautiful Images" data-splide='${setting}'>
+  block.innerHTML = `<div class="splide ${className}" aria-label="Beautiful Images" data-splide='${setting}'>
     <div class="splide__track">
         <ul class="splide__list">
             ${slideList.join("")}

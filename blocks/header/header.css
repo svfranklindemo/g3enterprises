@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  &.minimized {
+  &.minimized{
     background-color: var(--background-color);
     box-shadow: 0 .25rem 1rem rgba(23,21,22,.16);
   }
@@ -23,6 +23,10 @@ header nav {
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
+
+  @media (width < 700px) {
+    background: #fff;
+  }
 }
 
 header nav[aria-expanded='true'] {
@@ -32,6 +36,10 @@ header nav[aria-expanded='true'] {
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100vh;
+
+  @media (width < 700px) {
+    background: #fff;
+  }
 }
 
 @media (width >= 600px) {
@@ -176,6 +184,18 @@ header nav .nav-sections ul {
   padding-left: 0;
   font-size: var(--body-font-size-s);
   font-weight: 500;
+
+  @media (width < 700px) {
+    & > li {
+      margin-bottom: 30px;
+      ul > li {
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-bottom: 0;
+        color: gray;
+      }
+    }
+  }
 }
 
 header nav .nav-sections ul > li {
@@ -276,6 +296,12 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 
+  @media (width < 700px) {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
   & > div {
     display: flex;
     flex-direction: row;
@@ -301,24 +327,28 @@ header nav .nav-tools {
     }
   }
 }
-
-.nav-wrapper:not(.minimized) {
-  .nav-brand {
-    img {
-      filter: brightness(0) invert(1);
+@media (width >= 900px) {
+  .nav-wrapper:not(.minimized) {
+    .nav-brand {
+      img {
+        filter: brightness(0) invert(1);
+      }
     }
-  }
-  .nav-tools {
-    .icon > img {
-      filter: invert();
+    .nav-tools {
+      .icon > img {
+        filter: invert();
+      }
     }
-  }
 
-  .nav-sections > div > ul {
-    & > li {
-      & > p, &:after {
-        color: white;
+    .nav-sections > div > ul {
+      & > li {
+        & > p, &:after {
+          color: white;
+        }
       }
     }
   }
 }
+
+
+

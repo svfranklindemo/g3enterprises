@@ -4,8 +4,17 @@ export default async function decorate(block) {
 /*
   await loadScript('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js');
   await loadCSS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css');*/
+  
+  const arrBlocks = [...block.querySelectorAll(':scope > div')];
+  const arrProperties = arrBlocks.splice(0,2);
+  const className = arrProperties[0].innerText.trim();
+  let setting = arrProperties[1].innerText.trim();
 
-  const slideList = [...block.querySelectorAll(':scope > div')].map(el => {
+  if(!setting) {
+    setting = '{"type":"loop", "autoplay": false, "perPage":4}';
+  }
+
+  const slideList = arrBlocks.map(el => {
     return `<li class="splide__slide">
                 <div class="splide__slide__container">
                     <div class="slide__content">${el.innerHTML}</div>
@@ -13,7 +22,7 @@ export default async function decorate(block) {
             </li>`
   });
 
-  block.innerHTML = `<div class="splide" aria-label="Beautiful Images" data-splide='{"type":"loop", "autoplay": false, "perPage":4}'>
+  block.innerHTML = `<div class="splide" aria-label="Beautiful Images" data-splide='${setting}'>
     <div class="splide__track">
         <ul class="splide__list">
             ${slideList.join("")}

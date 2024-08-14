@@ -1,6 +1,9 @@
 export default async function decorate(block) {
 
   if(window.location.href.includes("/content/")) return block;
+/*
+  await loadScript('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js');
+  await loadCSS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css');*/
 
   const slideList = [...block.querySelectorAll(':scope > div')].map(el => {
     return `<li class="splide__slide">

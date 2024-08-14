@@ -235,3 +235,15 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
+
+
+h5 {
+  text-align: center;
+  font-family: Gotham, sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: #5d6b83;
+}

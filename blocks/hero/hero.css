@@ -12,6 +12,11 @@ main .hero-container {
   min-height: 800px;
 
   > div {
+    &:nth-child(1) {
+      img {
+        filter: brightness(.5);
+      }
+    }
     &:nth-child(2) {
       display: flex;
       flex-direction: column;
@@ -25,12 +30,34 @@ main .hero-container {
     }
   }
 }
-
-.hero h1 {
+.hero h3 {
+  margin: 0 auto 16px;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
+  color: #fff;
+
+  font-family: Gotham, sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.hero h1 {
+  font-family: Gotham, sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: #fff;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  > strong {
+    border-bottom: 5px solid #fff;
+  }
+  > em {
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
 .hero picture {

@@ -13,16 +13,15 @@ export default async function decorate(block) {
             </li>`
   });
 
-  block.innerHTML = `<div class="splide" aria-label="Beautiful Images" data-splide='{"type":"loop", "autoplay": true, "perPage":3}'>
+  block.innerHTML = `<div class="splide" aria-label="Beautiful Images" data-splide='{"type":"loop", "autoplay": false, "perPage":4}'>
     <div class="splide__track">
         <ul class="splide__list">
             ${slideList.join("")}
         </ul>
     </div>
-    <div class="splide__progress">
-        <div class="splide__progress__bar">
-        </div>
-    </div>
+    <!--<div class="splide__progress">
+        <div class="splide__progress__bar"></div>
+    </div>-->
 </div>`;
 
   new Splide( block.querySelector('.splide') ).mount();

@@ -16,6 +16,7 @@
   --link-hover-color: #136ff6;
   --background-color: white;
   --light-color: #eee;
+  --highlight: rgb(247, 247, 247);
   --dark-color: #ccc;
   --text-color: black;
 
@@ -233,7 +234,7 @@ main .section {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background-color: var(--highlight);
 }
 
 
@@ -246,4 +247,42 @@ h5 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #5d6b83;
+}
+h3 {
+  font-family: Gotham, sans-serif;
+  font-weight: 500;
+  letter-spacing: normal;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  color: #171516;
+}
+
+.button-container {
+  .button {
+    &.secondary {
+      display: block;
+      text-transform: none;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      font-family: Gotham, sans-serif;
+      text-decoration: underline;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: #0b2972;
+      border: none;
+    }
+  }
+}
+
+.upcoming-events {
+  .button-container > em {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
 }

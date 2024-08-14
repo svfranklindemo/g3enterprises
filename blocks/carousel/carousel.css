@@ -1,5 +1,5 @@
 .carousel {
-  margin: 4rem 0;
+  margin: 4rem 0 0;
 
   *{
     box-sizing: border-box;
@@ -7,11 +7,16 @@
   }
 
   .splide__slide{
-    padding: 6rem;
+    padding: 20px;
     display: flex;
     justify-content: center;
-    background: #ECF0F1 ;
+    background: #fff ;
 
+    img {
+      width: 80%;
+      display: block;
+      margin: auto;
+    }
   }
 
   .splide__slide__container{
@@ -31,7 +36,7 @@
   }
 
   .slide-img{
-    width: 60px;
+    width: auto;
     height: 60px;
     border-radius: 50%;
     max-width: 100%;
@@ -45,5 +50,13 @@
   .slide-img__caption span{
     color: #2E86C1 ;
     font-weight: 500;
+  }
+  .splide__pagination {
+    z-index: 100;
+    display: flex !important;
+  }
+  .splide__pagination__page.is-active {
+    background: #0B2972;
+    transform: scale(1.2);
   }
 }
